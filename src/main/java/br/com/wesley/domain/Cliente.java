@@ -113,4 +113,5 @@ public class Cliente implements Serializable{
 		return "Cliente [id=" + id + ", nome=" + nome + ", email=" + email + ", telefone=" + telefone + ", rg=" + rg
 				+ ", endereco=" + endereco + "]";
 	}
+	
 }

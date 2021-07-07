@@ -140,4 +140,5 @@ public class Endereco implements Serializable{
 		return "Endereco [id=" + id + ", rua=" + rua + ", numero=" + numero + ", bairro=" + bairro + ", cidade="
 				+ cidade + ", cep=" + cep + "]";
 	}
+	
 }

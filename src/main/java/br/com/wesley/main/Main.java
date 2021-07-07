@@ -12,6 +12,7 @@ import br.com.wesley.domain.Endereco;
 import br.com.wesley.domain.Produto;
 import br.com.wesley.domain.Venda;
 import br.com.wesley.domain.Vendedor;
+import br.com.wesley.repository.ProdutoRepository;
 
 public class Main {
 
@@ -59,34 +60,7 @@ public class Main {
 		
 		vd1.setVendas(vendas1);
 		vd2.setVendas(vendas2);
-
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("testedb");
-		EntityManager em = emf.createEntityManager();
-
-		em.getTransaction().begin();
 		
-		em.persist(p1);
-		em.persist(p2);
-		em.persist(p3);
-		em.persist(p4);
-		
-		em.persist(vd1);
-		em.persist(vd2);
-		
-		em.persist(e1);
-		em.persist(e2);
-		
-		em.persist(c1);
-		em.persist(c2);
-		
-		em.persist(v1);
-		em.persist(v2);
-		em.persist(v3);
-		em.persist(v4);
-		
-		em.getTransaction().commit();
-		System.out.println("Transa��o com o BD conclu�da.");
-		em.close(); // fecha o em
-		emf.close(); // fecha o emf
+		ProdutoRepository.salvar(p2);
 	}
 }
