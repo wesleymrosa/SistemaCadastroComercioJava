@@ -6,8 +6,6 @@
 	<artifactId>HelloJPA</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-	
-
 	<dependencies>
 		<dependency> <!-- essa dependência trata da parte essencial do Hibernate-->
 			<groupId>org.hibernate</groupId>

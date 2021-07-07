@@ -1,4 +1,4 @@
-package br.com.wesley.model;
+package br.com.wesley.domain;
 
 import java.io.Serializable;
 import java.util.List;

@@ -1,36 +1,39 @@
-package br.com.wesley.model;
+package br.com.wesley.domain;
 
 import java.io.Serializable;
-import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 @Entity
-public class Vendedor implements Serializable {
+public class Cliente implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String nome;
-	@OneToMany
-	private List<Venda> vendas;
+	private String email;
+	private String telefone;
+	private String rg;
+	@OneToOne
+	private Endereco endereco;
 	
-	public Vendedor() {
+	public Cliente() {
 	
 	}
 
-	public Vendedor(Integer id, String nome, List<Venda> vendas) {		
+	public Cliente(Integer id, String nome, String email, String telefone, String rg, Endereco endereco) {		
 		this.id = id;
 		this.nome = nome;
-		this.vendas = vendas;
+		this.email = email;
+		this.telefone = telefone;
+		this.rg = rg;
+		this.endereco = endereco;
 	}
-	
-	
 
 	public Integer getId() {
 		return id;
@@ -48,12 +51,36 @@ public class Vendedor implements Serializable {
 		this.nome = nome;
 	}
 
-	public List<Venda> getVendas() {
-		return vendas;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setVendas(List<Venda> vendas) {
-		this.vendas = vendas;
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getTelefone() {
+		return telefone;
+	}
+
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+
+	public String getRg() {
+		return rg;
+	}
+
+	public void setRg(String rg) {
+		this.rg = rg;
+	}
+
+	public Endereco getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
 	}
 
 	@Override
@@ -61,12 +88,8 @@ public class Vendedor implements Serializable {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
-		result = prime * result + ((vendas == null) ? 0 : vendas.hashCode());
 		return result;
 	}
-	
-	
 
 	@Override
 	public boolean equals(Object obj) {
@@ -76,27 +99,18 @@ public class Vendedor implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Vendedor other = (Vendedor) obj;
+		Cliente other = (Cliente) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
 		} else if (!id.equals(other.id))
-			return false;
-		if (nome == null) {
-			if (other.nome != null)
-				return false;
-		} else if (!nome.equals(other.nome))
-			return false;
-		if (vendas == null) {
-			if (other.vendas != null)
-				return false;
-		} else if (!vendas.equals(other.vendas))
 			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
-		return "Vendedor [id=" + id + ", nome=" + nome + ", vendas=" + vendas + "]";
+		return "Cliente [id=" + id + ", nome=" + nome + ", email=" + email + ", telefone=" + telefone + ", rg=" + rg
+				+ ", endereco=" + endereco + "]";
 	}
 }

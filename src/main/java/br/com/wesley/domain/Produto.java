@@ -1,4 +1,4 @@
-package br.com.wesley.model;
+package br.com.wesley.domain;
 
 import java.io.Serializable;
 
@@ -6,7 +6,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -20,8 +19,6 @@ public class Produto implements Serializable{
 	private String nome;
 	private String descricao;
 	private Double valor;
-	//@OneToOne
-	//private Marca marca;
 
 	public Produto(Integer id, String nome, String descricao, Double valor) {		
 		this.id = id;
@@ -66,14 +63,6 @@ public class Produto implements Serializable{
 	public void setValor(Double valor) {
 		this.valor = valor;
 	}
-	
-	//public Marca getMarca() {
-		//return marca;
-	//}
-
-	//public void setMarca(Marca marca) {
-		//this.marca = marca;
-	//}
 
 	@Override
 	public int hashCode() {
