@@ -4,6 +4,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+import br.com.wesley.domain.Produto;
 import br.com.wesley.domain.Vendedor;
 
 public class VendedorRepository {
@@ -25,9 +26,21 @@ public class VendedorRepository {
 			em.getTransaction().begin();
 			Vendedor vendedor = em.find(Vendedor.class, id);
 			em.getTransaction().commit();
-			em.close();
-			emf.close();
+//			em.close();
+//			emf.close();
 			
 			return vendedor;
+		}
+		
+		public static void remover(Vendedor vendedor) {
+			
+			em.getTransaction().begin();
+			em.remove(vendedor);
+			em.getTransaction().commit();
+		}
+		
+		public static void remover(Integer id) {
+			Vendedor vendedor = busca(id);
+			remover(vendedor);
 		}
 }

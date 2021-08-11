@@ -2,7 +2,9 @@ package br.com.wesley.domain;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -19,7 +21,7 @@ public class Cliente implements Serializable{
 	private String email;
 	private String telefone;
 	private String rg;
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
 	private Endereco endereco;
 	
 	public Cliente() {

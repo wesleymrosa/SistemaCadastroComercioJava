@@ -3,7 +3,9 @@ package br.com.wesley.domain;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -19,7 +21,7 @@ public class Venda implements Serializable {
 	private Integer id;
 	@OneToOne
 	private Vendedor vendedor;
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
 	private Cliente cliente;
 
 	public Venda() {
