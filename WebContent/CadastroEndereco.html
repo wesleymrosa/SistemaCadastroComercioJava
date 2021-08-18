@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+	crossorigin="anonymous">
+	<title>Cadastro de Enderecos</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+</head>
+<body>
+	<div class="container">
+		<h1>Página de cadastro de endereços</h1>
+		<form>
+			<div class="mb-3 container">
+				<!-- m de margin e b de botton (parte de baixo) -->
+				<div class="row">
+					<div class="col-md-10 col-sm-12">
+						<!-- md de tela média, sm tamanho de celular padrão-->
+						<label for="rua" class="form-label">Rua</label>
+						<!-- form-label é da formatação do bootstrap -->
+						<input type="text" class="form-control" id="rua" />
+					</div>
+					<div class="col-md-2 col-sm-6">
+						<label for="numero" class="form-label">Número</label> 
+						<input type="text" class="form-control" id="numero" />
+					</div>
+				</div>
+				<div class="mb-3 row">
+					<div class="col-md-12">
+						<label for="bairro" class="form-label">Bairro</label> 
+						<input type="text" class="form-control" id="bairro" />
+					</div>
+				</div>
+				<div class="mb-3 row">
+					<div class="col-md-12">
+						<label for="cidade" class="form-label">Cidade</label> 
+						<input type="text" class="form-control" id="didade" />
+					</div>
+				</div>
+				<div class="mb-3 row">
+					<div class="col-md-4 col-sm-6">
+						<label for="cep" class="form-label">Cep</label> 
+						<input type="text" class="form-control" id="cep" placeholder="Ex.: 000.000.000-00" />
+					</div>
+				</div>
+				<div class="mb-3 row">
+					<div class="col-md-2">
+						<button type="submit" class="btn btn-danger ">Limpar</button>
+					</div>
+					<div class="col-md-2">
+						<button type="submit" class="btn btn-success ml-5">Enviar</button>
+					</div>
+				</div>
+			</div>
+	</div>
+	</form>
+	</div>
+</body>
+</html>
