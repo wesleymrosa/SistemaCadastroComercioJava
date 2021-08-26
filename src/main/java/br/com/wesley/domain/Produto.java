@@ -25,15 +25,12 @@ public class Produto implements Serializable{
 		this.nome = nome;
 		this.descricao = descricao;
 		this.valor = valor;
-		
 	}
 
 	public Produto() {
-
 	}
 
 	public Produto(Object id2, String nome2, String descricao2, String string) {
-		// TODO Auto-generated constructor stub
 	}
 
 	public Integer getId() {
@@ -115,5 +112,4 @@ public class Produto implements Serializable{
 	public String toString() {
 		return "Produto id= " + id + ", nome= " + nome + ", descricao= " + descricao + ", valor= " + valor ;
 	}
-	
 }

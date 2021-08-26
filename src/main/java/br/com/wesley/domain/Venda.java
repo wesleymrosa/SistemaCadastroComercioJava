@@ -25,7 +25,6 @@ public class Venda implements Serializable {
 	private Cliente cliente;
 
 	public Venda() {
-
 	}
 
 	public Venda(Integer id, Vendedor vendedor, Cliente cliente) {
@@ -33,7 +32,6 @@ public class Venda implements Serializable {
 		this.id = id;
 		this.vendedor = vendedor;
 		this.cliente = cliente;
-
 	}
 
 	public Integer getId() {

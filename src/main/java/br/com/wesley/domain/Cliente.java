@@ -25,7 +25,6 @@ public class Cliente implements Serializable{
 	private Endereco endereco;
 	
 	public Cliente() {
-	
 	}
 
 	public Cliente(Integer id, String nome, String email, String telefone, String rg, Endereco endereco) {		

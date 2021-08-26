@@ -18,7 +18,6 @@ public class Vendedor implements Serializable {
 	private Integer id;
 	private String nome;
 	
-	
 	public Vendedor() {
 	}
 
