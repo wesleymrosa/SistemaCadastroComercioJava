@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+	crossorigin="anonymous">
+	<link rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+		<link rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			<!-- biblioteca de ícones CSS, excelente uso -->
+		<title>Busca de Clientes</title>
+		<meta http-equiv="Content-Type"
+			content="text/html; charset=ISO-8859-1" />
+</head>
+<body>
+	<div class="container">
+		<h1>Página de busca de clientes</h1>
+		<form>
+			<!-- m de margin e b de botton (parte de baixo) -->
+			<div class="row">
+				<div class="col-md-4 col-sm-6 col-xs-6">
+					<!-- md de tela média, sm tamanho de celular padrão-->
+					<!--<label for="id" class="form-label">id</label> form-label é da formatação do bootstrap -->
+					<input type="text" class="form-control" id="id" />
+				</div>
+				<div class="col-md-1 col-sm-2 col-xs-2">
+					<button type="submit" class="btn btn-primary">
+						<i class="fa fa-search"></i>
+					</button>
+					<!-- btn-primary coloca o fundo do ícone na cor azul, ficar atento à documentação do bootstrap, buttons, sobre o tema. -->
+				</div>
+			</div>
+			<div class="mb-3 row">
+				<div class="col-md-1 col-sm-4 col-xs-6">
+					<!--  <button type="reset" class="btn btn-danger ">Limpar</button>-->
+				</div>
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th scope="col">Id</th>
+							<th scope="col">Nome</th>
+							<th scope="col">E-mail</th>
+							<th scope="col">Telefone</th>
+							<th scope="col">Rg</th>
+							<th scope="col">Endereço</th>
+							<th scope="col">Lixeira</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">1</th>							
+							<td>Otto</td>
+							<td>wesley@gmail.com</td>
+							<td>999999999</td>
+							<td>252525</td>
+							<td><i class="fa fa-map-marker" aria-hidden="true"></i></td>
+							<td>@mdo</td>
+							
+						</tr>
+						<tr>
+							<th scope="row">2</th>
+							<td>Jacob</td>
+							<td>Thornton</td>
+							<td>@fat</td>
+						</tr>
+						<tr>
+							<th scope="row">3</th>
+							<td colspan="2">Larry the Bird</td>
+							<td>@twitter</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+	</div>
+	</form>
+	</div>
+</body>
+</html>
