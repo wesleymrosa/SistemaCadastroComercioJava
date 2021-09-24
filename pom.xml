@@ -7,12 +7,19 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 	<dependencies>
-		<dependency> <!-- essa dependência trata da parte essencial do Hibernate-->
+		<dependency>
+			<groupId>javax.faces</groupId>
+			<artifactId>javax.faces-api</artifactId>
+			<version>2.3</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency> <!-- essa dependência trata da parte essencial do Hibernate -->
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
 			<version>5.5.2.Final</version>
 		</dependency>
-		<dependency> <!-- entity manager ... gerenciador de entidades ... responsável pela conversão da classe em tabelas  -->
+		<dependency> <!-- entity manager ... gerenciador de entidades ... responsável pela conversão 
+				da classe em tabelas -->
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
 			<version>5.5.2.Final</version>
@@ -21,6 +28,12 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>8.0.25</version>
+		</dependency>
+		<dependency>
+			<groupId>org.wildfly.plugins</groupId>
+			<artifactId>wildfly-maven-plugin</artifactId>
+			<version>2.1.0.Beta1</version>
+			<type>maven-plugin</type>
 		</dependency>
 	</dependencies>
 </project>
